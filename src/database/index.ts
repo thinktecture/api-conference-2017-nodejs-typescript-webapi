@@ -39,8 +39,8 @@ export class DatabaseProvider {
                 Customer,
                 Bill
             ],
-            autoSchemaSync: true
-        } as any); // as any to prevent complaining about the object does not fit to MongoConfiguration, which we won't use here
+            synchronize: true
+        });
 
         return DatabaseProvider.connection;
     }
